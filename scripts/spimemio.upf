@@ -1,0 +1,24 @@
+
+
+create_power_domain PDm 
+
+
+create_supply_port VDDo -domain PDm -direction in
+create_supply_port VDD -domain PDm -direction in
+create_supply_port VSS -domain PDm -direction in
+
+create_supply_net VDDo
+create_supply_net VDD
+create_supply_net VSS
+
+connect_supply_net VDDo -port VDDo
+connect_supply_net VDD -port VDD
+connect_supply_net VSS -port VSS
+
+
+set_related_supply_net -power VDDo -ground VSS
+set_domain_supply_net PDm \
+               -primary_power_net VDD \
+               -primary_ground_net VSS			
+
+
