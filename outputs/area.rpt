@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : simpleuart
+Version: T-2022.03-SP4
+Date   : Mon Mar 24 15:32:30 2025
+****************************************
+
+Library(s) Used:
+
+    saed14rvt_ss0p6v125c (File: /home1/14_nmts/14_nmts/stdcell_rvt/db_ccs/saed14rvt_ss0p6v125c.db)
+
+Number of ports:                          506
+Number of nets:                          1383
+Number of cells:                          934
+Number of combinational cells:            782
+Number of sequential cells:               139
+Number of macros/black boxes:               0
+Number of buf/inv:                        113
+Number of references:                      34
+
+Combinational area:                214.274401
+Buf/Inv area:                       20.246400
+Noncombinational area:             151.803602
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   366.078002
+Total area:                 undefined
+1

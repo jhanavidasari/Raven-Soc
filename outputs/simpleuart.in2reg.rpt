@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -group in2reg
+        -max_paths 1
+Design : simpleuart
+Version: T-2022.03-SP4
+Date   : Mon Mar 24 15:32:30 2025
+****************************************
+
+ * Some/all delay information is back-annotated.
+Wire Load Model Mode: Inactive.
+
+  Startpoint: resetn (input port clocked by clk)
+  Endpoint: send_divcnt_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: in2reg
+  Path Type: max
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  input external delay                                    0.50       0.50 r    
+  resetn (in)                                             0.00       0.50 r    
+  U396/X (SAEDRVT14_BUF_ECO_1)                            0.05 *     0.55 r    0.60
+  U411/X (SAEDRVT14_ND2_CDC_1)                            0.07 *     0.62 f    0.60
+  U558/X (SAEDRVT14_AO221_1)                              0.05 *     0.68 f    0.60
+  U424/X (SAEDRVT14_INV_0P5)                              0.13 *     0.80 r    0.60
+  U567/X (SAEDRVT14_AN2_MM_1)                             0.06 *     0.86 r    0.60
+  send_divcnt_reg_4_/D (SAEDRVT14_FSDPQ_V2LP_1)           0.00 *     0.86 r    0.60
+  data arrival time                                                  0.86      
+
+  clock clk (rise edge)                                   4.00       4.00      
+  clock network delay (ideal)                             0.00       4.00      
+  send_divcnt_reg_4_/CK (SAEDRVT14_FSDPQ_V2LP_1)          0.00       4.00 r    
+  library setup time                                     -0.03       3.97      
+  data required time                                                 3.97      
+  ------------------------------------------------------------------------------------
+  data required time                                                 3.97      
+  data arrival time                                                 -0.86      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        3.11      
+
+
+1
