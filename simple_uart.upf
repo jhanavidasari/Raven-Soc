@@ -1,0 +1,17 @@
+create_power_domain PD -include_scope
+
+
+create_supply_port VDD  -direction in
+create_supply_port VSS  -direction in
+
+create_supply_net VDD
+create_supply_net VSS
+
+
+set_domain_supply_net PD -primary_power_net VDD \
+            -primary_ground_net VSS
+
+
+
+connect_supply_net  VSS -ports VSS 
+connect_supply_net  VDD -ports VDD 
